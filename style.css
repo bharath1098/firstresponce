@@ -127,6 +127,64 @@ body{
 
 .range-slider__range{
     width: 98%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 50%;
+}
+
+
+.range-slider__range::-webkit-slider-runnable-track {
+	background-color: #D9D9D9;
+    /* background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, #D9D9D9 40%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(40%,  #D9D9D9));
+    background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%,  #D9D9D9 40%);
+    background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%,  #D9D9D9 40%);
+    background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%,  #D9D9D9 40%);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%,  #D9D9D9 40%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 ); */
+    height: 2px;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 95%;
+	height: 5px;
+}
+
+.range-slider__range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: #ffffff;
+	border-radius: 50%;
+	border: 3px solid #247CFF;
+  	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin-top: -5px;
+	
+}
+
+/* .range-slider__range::-moz-range-track {
+    -moz-appearance: none;
+    background: rgba(59,173,227,1);
+    background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+    background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+    height: 2px;
+  } */
+
+
+
+.circle{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    left: 25.2%;
+    z-index: 1;
+    top: 12%;
 }
 
 .range-slider div{
@@ -135,8 +193,6 @@ body{
     font-size: 12px;
     color: #888888;
 }
-
-
 
 .input-field form{
     display: flex;
@@ -155,7 +211,22 @@ form input,textarea,select{
 
 .option{
  background-color: #1A1A1A;
+ /* height: 10px !important; */
 }
+
+.option-div{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-div-icon{
+    width:5px;
+    height:5px;
+    background-color: red;
+}
+
 
 form button{
     width: 35%;
@@ -179,19 +250,40 @@ form button{
     color:#FFFFFF;
 }
 
-.check-box input{
-    filter: brightness(11%);
-    border: solid red;
-    
-}
-
-.check-box label::before{
-    border: 2px solid blue;
-}
-.check-box input:checked{
-    filter: brightness(100%);
-}
-
+.checkbox{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .checkbox__input{
+    display: none;
+  }
+  .checkbox__box{
+    width: 1em;
+    height: 1em;
+    border: 1px solid #247CFF;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .checkbox__box::after{
+    content: '\2714';
+    color: #ffffff;
+    transform: scale(0);
+    transition: tranform 0.15s;
+  }
+  .checkbox__input:checked + .checkbox__box{
+    background: #2266dc;
+    border-color: #2266dc;
+  }
+  .checkbox__input:checked + .checkbox__box::after{
+    transform: scale(1);
+  }
 
 
 
