@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidentlog</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="side-bar">
+
+            <div class="side-bar-top-container">
+                <div class="profile"><img src="./image//profile-pic.svg" alt="progile-pic"></div>
+                <div class="icons-container">
+                    <div class="icons active" ><img src="./image/alart.svg" alt="alart-symbol"></div>
+                    <div class="icons"><img src="./image/Maps.svg" alt="map-icon"></div>
+                    <div class="icons"><img src="./image/Surveillance Cctv 1.svg" alt="Surveillance-icon"></div>
+                    <div class="icons"><img src="./image/Conversation Chat 1.svg" alt="chat-icon"></div>
+                    <div class="icons"><img src="./image/User Live.svg" alt="live-icon"></div>
+                </div>
+            </div>
+                
+            <div class="logo"><img src="./image/mobius logo.svg" alt="mobius-logo"></div>
+        </div>
+
+        <div class="icon-info">
+            <img src="./image/exit-image.svg" alt="exit-symbol" class="exit-symbol">
+            <div class="icon-info-container">
+
+                <div class="add-info">
+                    <img src="./image/add-icon.svg" alt="add-icon">
+                    <p>Add Incident</p>
+                </div>
+   
+                <div class="range-slider">
+                    <input class="range-slider__range" type="range" value="0" min="0" max="500">
+                    <div><p>Incident Log</p>  <p>Dispatch</p></div>
+                  </div>
+
+                <div class="input-field">
+                    <form action="">
+                        <p style="font-size:16px;font-weight:500;font-family: 
+                        Roboto;">Incident Log</p>
+                        <input type="text" placeholder="Event">
+                        <textarea name="Description" id="Description" cols="30" rows="5" placeholder="Description"></textarea>
+                        <input type="text" placeholder="Location of Incident">
+                        <select name=""  aria-placeholder="Urgency">
+                            <option value="" class="option">Urgency</option>
+                            <option value="Immediate" class="option"> <div>Immediate</div> </option>
+                            <option value="Moderate" class="option"> <div>Moderate</div> </option>
+                            <option value="Low" class="option"> <div>Low</div> </option>
+                        </select>
+                        <button>Log Incident</button>
+                       <div class="check-box"> <input type="checkbox" id="Send safety instruction">
+                        <label for="Send safety instruction">Send Safety Instructions</label>  </div>
+                        <div class="check-box"> <input type="checkbox" id="Issue alert">
+                        <label for="Issue alert">Issue Alert</label> </div>
+                    </form>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+
+        <div class="map-container" /*id="map"*/></div>
+        <div class="map-control-container">
+            <div class="map-control"><img src="./image/map-control-icon1.svg" alt="map-control-icon1"></div>
+            <div class="map-control"><img src="./image/map-control-icon2.svg" alt="map-control-icon2"></div>
+            <div class="map-control"><img src="./image/map-control-icon3.svg" alt="map-control-icon3"></div>
+            <div class="map-control map-control4"><img src="./image/map-control-icon4.svg" alt="map-control-icon4" ></div>
+        </div>
+        <div class="map-info-control-container">
+            <div class="info-control"><img src="./image/info-control1.svg" alt="Traffic"></div>
+            <div class="info-control"><img src="./image/info-control2.svg" alt="Body"></div>
+            <div class="info-control"><img src="./image/info-control3.svg" alt="Security"></div>
+            <div class="info-control"><img src="./image/info-control4.svg" alt="Drone"></div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
